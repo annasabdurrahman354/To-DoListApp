@@ -50,6 +50,7 @@ class TaskActivity : AppCompatActivity() {
 
         taskViewModel.tasks.observe(this, Observer(this::showRecyclerView))
 
+        // Snackbar not showing because the showSnackBar function has not been used in viewmodel observe
         taskViewModel.snackbarText.observe(this){
             showSnackBar(it)
         }
